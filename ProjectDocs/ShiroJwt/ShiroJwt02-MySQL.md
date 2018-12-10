@@ -398,7 +398,7 @@ OK，逆向生成entity和mapper及mapper的xml文件，详细查看:[https://gi
 ```
 mvn mybatis-generator:generate
 ```
-![image text](https://github.com/wang926454/Reader/blob/master/ShiroJwt/image/20181008001.png)
+![image text](https://docs.wang64.cn/ProjectDocs/ShiroJwt/image/20181008001.png)
 
 #### 新建DTO
 
@@ -563,7 +563,7 @@ import java.util.List;
 
 public interface RoleMapper extends Mapper<RoleDto> {
     /**
-     * TODO：根据User查询Role
+     * 根据User查询Role
      * @param userDto
      * @return java.util.List<com.wang.model.RoleDto>
      * @author Wang926454
@@ -619,7 +619,7 @@ import java.util.List;
 
 public interface PermissionMapper extends Mapper<PermissionDto> {
     /**
-     * TODO：根据Role查询Permission
+     * 根据Role查询Permission
      * @param roleDto
      * @return java.util.List<com.wang.model.PermissionDto>
      * @author Wang926454
@@ -689,7 +689,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * TODO：UserController
+ * UserController
  * @author Wang926454
  * @date 2018/8/29 15:45
  */
@@ -704,7 +704,7 @@ public class UserController {
     }
 
     /**
-     * TODO：获取所有用户
+     * 获取所有用户
      * @param 
      * @return java.util.Map<java.lang.String,java.lang.Object>
      * @author Wang926454
@@ -721,7 +721,7 @@ public class UserController {
     }
 
     /**
-     * TODO：获取指定用户
+     * 获取指定用户
      * @param id
      * @return java.util.Map<java.lang.String,java.lang.Object>
      * @author Wang926454
@@ -738,7 +738,7 @@ public class UserController {
     }
 
     /**
-     * TODO：新增用户
+     * 新增用户
      * @param userDto
      * @return java.util.Map<java.lang.String,java.lang.Object>
      * @author Wang926454
@@ -757,7 +757,7 @@ public class UserController {
     }
 
     /**
-     * TODO：更新用户
+     * 更新用户
      * @param userDto
      * @return java.util.Map<java.lang.String,java.lang.Object>
      * @author Wang926454
@@ -775,7 +775,7 @@ public class UserController {
     }
 
     /**
-     * TODO：删除用户
+     * 删除用户
      * @param id
      * @return java.util.Map<java.lang.String,java.lang.Object>
      * @author Wang926454
@@ -793,7 +793,7 @@ public class UserController {
     }
 
     /**
-     * TODO：登录授权
+     * 登录授权
      * @param userDto
      * @return com.wang.model.common.ResponseBean
      * @author Wang926454
@@ -812,7 +812,7 @@ public class UserController {
     }
 
     /**
-     * TODO：测试登录
+     * 测试登录
      * @param
      * @return com.wang.model.common.ResponseBean
      * @author Wang926454
@@ -830,7 +830,7 @@ public class UserController {
     }
 
     /**
-     * TODO：@RequiresAuthentication和subject.isAuthenticated()返回true一个性质
+     * @RequiresAuthentication和subject.isAuthenticated()返回true一个性质
      * @param 
      * @return com.wang.model.common.ResponseBean
      * @author Wang926454
@@ -843,7 +843,7 @@ public class UserController {
     }
 
     /**
-     * TODO：401没有权限异常
+     * 401没有权限异常
      * @param
      * @return com.wang.model.common.ResponseBean
      * @author Wang926454
@@ -869,7 +869,7 @@ public interface IBaseService<T> {
 
     // Select
     /**
-     * TODO：根据实体中的属性值进行查询，查询条件使用等号
+     * 根据实体中的属性值进行查询，查询条件使用等号
      * @param record
      * @return java.util.List<T>
      * @author Wang926454
@@ -878,7 +878,7 @@ public interface IBaseService<T> {
     List<T> select(T record);
 
     /**
-     * TODO：根据主键字段进行查询，方法参数必须包含完整的主键属性，查询条件使用等号
+     * 根据主键字段进行查询，方法参数必须包含完整的主键属性，查询条件使用等号
      * @param key
      * @return T
      * @author Wang926454
@@ -887,7 +887,7 @@ public interface IBaseService<T> {
     T selectByPrimaryKey(Object key);
 
     /**
-     * TODO：查询全部结果，select(null)方法能达到同样的效果
+     * 查询全部结果，select(null)方法能达到同样的效果
      * @param 
      * @return java.util.List<T>
      * @author Wang926454
@@ -896,7 +896,7 @@ public interface IBaseService<T> {
     List<T> selectAll();
 
     /**
-     * TODO：根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号
+     * 根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号
      * @param record
      * @return T
      * @author Wang926454
@@ -905,7 +905,7 @@ public interface IBaseService<T> {
     T selectOne(T record);
 
     /**
-     * TODO：根据实体中的属性查询总数，查询条件使用等号
+     * 根据实体中的属性查询总数，查询条件使用等号
      * @param record
      * @return int
      * @author Wang926454
@@ -915,7 +915,7 @@ public interface IBaseService<T> {
 
     // Insert
     /**
-     * TODO：保存一个实体，null的属性也会保存，不会使用数据库默认值
+     * 保存一个实体，null的属性也会保存，不会使用数据库默认值
      * @param record
      * @return int
      * @author Wang926454
@@ -924,7 +924,7 @@ public interface IBaseService<T> {
     int insert(T record);
 
     /**
-     * TODO：保存一个实体，null的属性不会保存，会使用数据库默认值
+     * 保存一个实体，null的属性不会保存，会使用数据库默认值
      * @param record
      * @return int
      * @author Wang926454
@@ -934,7 +934,7 @@ public interface IBaseService<T> {
 
     // Update
     /**
-     * TODO：根据主键更新实体全部字段，null值会被更新
+     * 根据主键更新实体全部字段，null值会被更新
      * @param record
      * @return int
      * @author Wang926454
@@ -943,7 +943,7 @@ public interface IBaseService<T> {
     int updateByPrimaryKey(T record);
 
     /**
-     * TODO：根据主键更新属性不为null的值
+     * 根据主键更新属性不为null的值
      * @param record
      * @return int
      * @author Wang926454
@@ -953,7 +953,7 @@ public interface IBaseService<T> {
 
     // Delete
     /**
-     * TODO：根据实体属性作为条件进行删除，查询条件使用等号
+     * 根据实体属性作为条件进行删除，查询条件使用等号
      * @param record
      * @return int
      * @author Wang926454
@@ -962,7 +962,7 @@ public interface IBaseService<T> {
     int delete(T record);
 
     /**
-     * TODO：根据主键字段进行删除，方法参数必须包含完整的主键属性
+     * 根据主键字段进行删除，方法参数必须包含完整的主键属性
      * @param key
      * @return int
      * @author Wang926454
@@ -972,7 +972,7 @@ public interface IBaseService<T> {
 
     // Example
     /**
-     * TODO：根据Example条件进行查询，这个查询支持通过Example类指定查询列，通过selectProperties方法指定查询列
+     * 根据Example条件进行查询，这个查询支持通过Example类指定查询列，通过selectProperties方法指定查询列
      * @param example
      * @return java.util.List<T>
      * @author Wang926454
@@ -981,7 +981,7 @@ public interface IBaseService<T> {
     List<T> selectByExample(Object example);
 
     /**
-     * TODO：根据Example条件进行查询总数
+     * 根据Example条件进行查询总数
      * @param example
      * @return int
      * @author Wang926454
@@ -990,7 +990,7 @@ public interface IBaseService<T> {
     int selectCountByExample(Object example);
 
     /**
-     * TODO：根据Example条件更新实体record包含的全部属性，null值会被更新
+     * 根据Example条件更新实体record包含的全部属性，null值会被更新
      * @param record
 	 * @param example
      * @return int
@@ -1000,7 +1000,7 @@ public interface IBaseService<T> {
     int updateByExample(@Param("record") T record, @Param("example") Object example);
 
     /**
-     * TODO：根据Example条件更新实体record包含的不是null的属性值
+     * 根据Example条件更新实体record包含的不是null的属性值
      * @param record
 	 * @param example
      * @return int
@@ -1010,7 +1010,7 @@ public interface IBaseService<T> {
     int updateByExampleSelective(@Param("record") T record, @Param("example") Object example);
 
     /**
-     * TODO：根据Example条件删除数据
+     * 根据Example条件删除数据
      * @param example
      * @return int
      * @author Wang926454
@@ -1020,7 +1020,7 @@ public interface IBaseService<T> {
 
     // RowBounds
     /**
-     * TODO：根据实体属性和RowBounds进行分页查询
+     * 根据实体属性和RowBounds进行分页查询
      * @param record
 	 * @param rowBounds
      * @return java.util.List<T>
@@ -1030,7 +1030,7 @@ public interface IBaseService<T> {
     List<T> selectByRowBounds(T record, RowBounds rowBounds);
 
     /**
-     * TODO：根据example条件和RowBounds进行分页查询
+     * 根据example条件和RowBounds进行分页查询
      * @param example
 	 * @param rowBounds
      * @return java.util.List<T>
@@ -1177,8 +1177,8 @@ public class UserServiceImpl extends BaseServiceImpl<UserDto> implements IUserSe
 
 #### 最后项目结构图
 
-![image text](https://github.com/wang926454/Reader/blob/master/ShiroJwt/image/20181008002.png)
-![image text](https://github.com/wang926454/Reader/blob/master/ShiroJwt/image/20181008003.png)
+![image text](https://docs.wang64.cn/ProjectDocs/ShiroJwt/image/20181008002.png)
+![image text](https://docs.wang64.cn/ProjectDocs/ShiroJwt/image/20181008003.png)
 
 #### 其他文件和SmithCruise文章内一致，地址：[https://www.jianshu.com/p/f37f8c295057](https://www.jianshu.com/p/f37f8c295057)
 
