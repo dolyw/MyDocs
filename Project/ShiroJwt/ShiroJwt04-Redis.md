@@ -893,7 +893,7 @@ public DefaultWebSecurityManager getManager(UserRealm userRealm) {
 ```
 
 #### OK，我们现在可以在Realm的doGetAuthorizationInfo()方法打断点看下请求第一次后Redis多了一条缓存数据，下次就不会再调用doGetAuthorizationInfo()方法，除非缓存失效
-![image text](https://docs.wang64.cn/ProjectDocs/ShiroJwt/image/20181009001.png)
+![image text](https://docs.wang64.cn/Project/ShiroJwt/image/20181009001.png)
 
 #### 当前博客源码：[https://download.csdn.net/download/wang926454/10726052](https://download.csdn.net/download/wang926454/10726052)
 
