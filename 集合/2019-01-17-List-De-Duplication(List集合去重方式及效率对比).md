@@ -3,7 +3,6 @@ title: List集合去重方式及效率对比
 description: 简单的介绍在Java中的List集合去重方式及效率对比
 category: List
 tags: [JavaSE, List]
-date: 2019-01-17 18:18:18
 ---
 
 -----
