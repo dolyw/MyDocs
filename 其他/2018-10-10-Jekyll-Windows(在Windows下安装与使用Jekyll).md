@@ -10,8 +10,8 @@ tags: [Jekyll, Ruby]
 ### 安装
 
 ##### 安装`Ruby`
-下载网站：[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)，这里要注意，安装有配套`DevKit`的版本，如`Ruby+Devkit 2.4.4-2(x64)`<br/>
-安装路径`D:\Tools`，过程简单的`I accept`，`Next`，`Finish`即可<br/>
+下载网站：[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)，这里要注意，安装有配套`DevKit`的版本，如`Ruby+Devkit 2.4.4-2(x64)`  
+安装路径`D:\Tools`，过程简单的`I accept`，`Next`，`Finish`即可  
 打开`CMD`，输入如下命令查看`Ruby`版本，查看是否安装成功
 ```
 ruby -v
@@ -187,5 +187,5 @@ Configuration file: D:/blog/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 ```
-访问[http://127.0.0.1:4000/](http://127.0.0.1:4000/)即可<br/>
+访问[http://127.0.0.1:4000/](http://127.0.0.1:4000/)即可  
 关闭服务，关闭当前窗口即可或者`Ctrl加C`

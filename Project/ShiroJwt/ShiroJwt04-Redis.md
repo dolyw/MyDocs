@@ -4,9 +4,10 @@
 
 > 目录:[https://blog.csdn.net/wang926454/article/details/82971291](https://blog.csdn.net/wang926454/article/details/82971291)
 
-首先感谢SmithCruise提供的思路，文章地址：[https://www.jianshu.com/p/f37f8c295057](https://www.jianshu.com/p/f37f8c295057)<br/>
+首先感谢SmithCruise提供的思路，文章地址：[https://www.jianshu.com/p/f37f8c295057](https://www.jianshu.com/p/f37f8c295057)  
 
-根据SmithCruise的项目进行后续更新<br/>
+根据SmithCruise的项目进行后续更新  
+
 * 将其改为数据库形式(MySQL)
 * 实现Shiro的Cache(Redis)功能
 * 解决无法直接返回401错误
@@ -15,6 +16,7 @@
 当前博客源码：[https://download.csdn.net/download/wang926454/10726052](https://download.csdn.net/download/wang926454/10726052)
 
 我的项目地址
+
 * Github：[https://github.com/wang926454/ShiroJwt](https://github.com/wang926454/ShiroJwt)
 * Gitee(码云)：[https://gitee.com/wang926454/ShiroJwt](https://gitee.com/wang926454/ShiroJwt)
 
