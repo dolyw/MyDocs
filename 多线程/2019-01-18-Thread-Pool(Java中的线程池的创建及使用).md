@@ -99,25 +99,46 @@ import java.util.concurrent.*;
 */
 public class ThreadPoolUtil {
 
-    private  volatile static ExecutorService executorService;
+    /**
+     * volatile定义executorService
+     */
+    private volatile static ExecutorService executorService;
 
-    private ThreadPoolUtil(){}
+    /**
+     * 禁止实例化
+     * @param
+     * @return
+     * @author Wang926454
+     * @date
+     */
+    private ThreadPoolUtil() {
+    }
 
+    /**
+     * 获取线程池
+     * @param 
+     * @return java.util.concurrent.ExecutorService
+     * @author Wang926454
+     * @date 2019/3/18 11:41
+     */
     public static ExecutorService getExecutorService() {
-       if (executorService == null) {
+        if (executorService == null) {
             synchronized (ThreadPoolUtil.class) {
                 /**
-                 *   ThreadPoolExecutor参数解释
-                 *   1. corePoolSize 核心线程池大小
-                 *   2. maximumPoolSize 线程池最大容量大小
-                 *   3. keepAliveTime 线程池空闲时，线程存活的时间
-                 *   4. TimeUnit 时间单位
-                 *   5. BlockingQueue 任务队列
-                 *   6. ThreadFactory 线程工厂
-                 *   7. RejectedExecutionHandler 线程拒绝策略
+                 * ThreadPoolExecutor参数解释
+                 * 1. corePoolSize 核心线程池大小
+                 * 2. maximumPoolSize 线程池最大容量大小
+                 * 3. keepAliveTime 线程池空闲时，线程存活的时间
+                 * 4. TimeUnit 时间单位
+                 * 5. BlockingQueue 任务队列
+                 * 6. ThreadFactory 线程工厂
+                 * 7. RejectedExecutionHandler 线程拒绝策略
                  */
-                ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
-                executorService = new ThreadPoolExecutor(10, 20, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
+                ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+                        .setNameFormat("demo-pool-%d").build();
+                executorService = new ThreadPoolExecutor(10, 20, 0L, 
+                        TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>(1024), 
+                        namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
             }
         }
         return executorService;
