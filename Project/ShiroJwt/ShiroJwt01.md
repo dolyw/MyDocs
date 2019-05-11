@@ -14,7 +14,7 @@
 我的项目地址
 
 * Github：[https://github.com/wang926454/ShiroJwt](https://github.com/wang926454/ShiroJwt)
-* Gitee(码云)：[https://gitee.com/wang926454/ShiroJwt](https://gitee.com/wang926454/ShiroJwt)
+* Gitee(码云)：[https://gitee.com/dolyw/ShiroJwt](https://gitee.com/dolyw/ShiroJwt)
 
 ## 目录
 

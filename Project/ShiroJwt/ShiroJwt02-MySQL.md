@@ -18,7 +18,7 @@
 我的项目地址
 
 * Github：[https://github.com/wang926454/ShiroJwt](https://github.com/wang926454/ShiroJwt)
-* Gitee(码云)：[https://gitee.com/wang926454/ShiroJwt](https://gitee.com/wang926454/ShiroJwt)
+* Gitee(码云)：[https://gitee.com/dolyw/ShiroJwt](https://gitee.com/dolyw/ShiroJwt)
 
 ## 将其改为数据库形式(MySQL)
 
@@ -400,7 +400,7 @@ OK，逆向生成entity和mapper及mapper的xml文件，详细查看:[https://gi
 ```
 mvn mybatis-generator:generate
 ```
-![image text](https://docs.wang64.cn/Project/ShiroJwt/image/20181008001.png)
+![image text](https://docs.dolyw.com/Project/ShiroJwt/image/20181008001.png)
 
 #### 新建DTO
 
@@ -1179,8 +1179,8 @@ public class UserServiceImpl extends BaseServiceImpl<UserDto> implements IUserSe
 
 #### 最后项目结构图
 
-![image text](https://docs.wang64.cn/Project/ShiroJwt/image/20181008002.png)
-![image text](https://docs.wang64.cn/Project/ShiroJwt/image/20181008003.png)
+![image text](https://docs.dolyw.com/Project/ShiroJwt/image/20181008002.png)
+![image text](https://docs.dolyw.com/Project/ShiroJwt/image/20181008003.png)
 
 #### 其他文件和SmithCruise文章内一致，地址：[https://www.jianshu.com/p/f37f8c295057](https://www.jianshu.com/p/f37f8c295057)
 
@@ -1188,4 +1188,4 @@ public class UserServiceImpl extends BaseServiceImpl<UserDto> implements IUserSe
 
 #### 我的项目地址
 * Github：[https://github.com/wang926454/ShiroJwt](https://github.com/wang926454/ShiroJwt)
-* Gitee(码云)：[https://gitee.com/wang926454/ShiroJwt](https://gitee.com/wang926454/ShiroJwt)
+* Gitee(码云)：[https://gitee.com/dolyw/ShiroJwt](https://gitee.com/dolyw/ShiroJwt)
