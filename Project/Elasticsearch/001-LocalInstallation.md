@@ -105,3 +105,83 @@ http.cors.allow-origin: "*"
 
 ### 安装本地Elasticsearch集群(分布式)
 
+* 安装说明，安装三个节点，一个`Master`，两个`Slave`，名称要相同，`9500`端口为`Master`节点，其余两个为`Slave`节点
+
+|集群名称|IP-端口|
+|:- |:-: |
+|myEsCluster |127.0.0.1:9500 |
+|myEsCluster |127.0.0.1:9600 |
+|myEsCluster |127.0.0.1:9700 |
+
+* ES安装包解压出三份ES，修改每个`Elasticsearch`安装目录下的`config/elasticsearch.yml`配置文件
+
+#### Master配置说明
+
+```yml
+# 设置支持Elasticsearch-Head
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+# 设置集群Master配置信息
+cluster.name: myEsCluster
+# 节点的名字，一般为Master或者Slave
+node.name: master
+# 节点是否为Master，设置为true的话，说明此节点为Master节点
+node.master: true
+# 设置网络，如果是本机的话就是127.0.0.1，其他服务器配置对应的IP地址即可(0.0.0.0支持外网访问)
+network.host: 127.0.0.1
+# 设置对外服务的Http端口，默认为 9200，可以修改默认设置
+http.port: 9500
+# 设置节点间交互的TCP端口，默认是9300
+transport.tcp.port: 9300
+# 手动指定可以成为Master的所有节点的Name或者IP，这些配置将会在第一次选举中进行计算
+cluster.initial_master_nodes: ["127.0.0.1"]
+```
+
+#### Slave配置说明
+
+```yml
+# 设置集群Slave配置信息
+cluster.name: myEsCluster
+# 节点的名字，一般为Master或者Slave
+node.name: slave1
+# 节点是否为Master，设置为true的话，说明此节点为master节点
+node.master: false
+# 设置对外服务的Http端口，默认为 9200，可以修改默认设置
+http.port: 9600
+# 设置网络，如果是本机的话就是127.0.0.1，其他服务器配置对应的IP地址即可(0.0.0.0支持外网访问)
+network.host: 127.0.0.1
+# 集群发现
+discovery.seed_hosts: ["127.0.0.1:9300"]
+```
+
+```yml
+# 设置集群Slave配置信息
+cluster.name: myEsCluster
+# 节点的名字，一般为Master或者Slave
+node.name: slave2
+# 节点是否为Master，设置为true的话，说明此节点为master节点
+node.master: false
+# 设置对外服务的Http端口，默认为 9200，可以修改默认设置
+http.port: 9700
+# 设置网络，如果是本机的话就是127.0.0.1，其他服务器配置对应的IP地址即可(0.0.0.0支持外网访问)
+network.host: 127.0.0.1
+# 集群发现
+discovery.seed_hosts: ["127.0.0.1:9300"]
+```
+
+* 最后两个`Slave`配置只需要改相应的端口号即可，一个`slave1`：9600，一个`slave2`：9700
+
+* 配置后完成后，启动一个`Master`，两个`Slave`，还有`Elasticsearch-Head`服务，此时页面可以查看ES集群的状态
+
+* 访问[http://localhost:9500/_cat/nodes?v](http://localhost:9500/_cat/nodes?v)
+
+```
+ip        heap.percent ram.percent cpu load_1m load_5m load_15m node.role master name
+127.0.0.1           18          87   6                          mdi       *      master
+127.0.0.1           16          87   6                          di        -      slave1
+127.0.0.1           16          87   6                          di        -      slave2
+```
+
+* 访问[http://localhost:9100](http://localhost:9100)
+
+![图示](https://docs.dolyw.com/Project/Elasticsearch/image/20190802001.png)

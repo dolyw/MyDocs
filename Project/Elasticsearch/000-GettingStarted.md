@@ -4,7 +4,9 @@
 
 ### Elasticsearch概念
 
-#### 什么是Elasticsearch(简称ES)
+#### 什么是`Elasticsearch`(简称ES)
+
+##### `Elasticsearch` VS `Solr`: [https://www.cnblogs.com/jajian/p/9801154.html](https://www.cnblogs.com/jajian/p/9801154.html)
 
 * 基于`Apache Lucene`构建的开源搜索引擎，提供一个分布式多用户能力的全文搜索引擎
 * 用`Java`编写的，提供简单易用的`RESTFul API`，当前流行的企业级搜索引擎
